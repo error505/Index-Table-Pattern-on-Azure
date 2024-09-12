@@ -18,10 +18,12 @@ The **Index Table Pattern** architecture consists of the following components:
 
 ```mermaid
 graph TD
-    Client["Client"] -->|Data Update| AzureFunction["Azure Function"]
+    Client["Client"] -->|Data Update Request| AzureFunction["Azure Function"]
+    Client -->|Search Request| AzureFunction
     AzureFunction -->|Updates| AzureTableStorage["Azure Table Storage"]
-    AzureFunction -->|Indexes| AzureAISearch["Azure AI Search"]
-    Client -->|Search Request| AzureAISearch
+    AzureFunction -->|Indexes| AzureCognitiveSearch["Azure Cognitive Search"]
+    AzureFunction -->|Search| AzureCognitiveSearch
+    AzureCognitiveSearch -->|Returns Results| AzureFunction
 
     subgraph Monitoring
         AppInsights["Application Insights"]
