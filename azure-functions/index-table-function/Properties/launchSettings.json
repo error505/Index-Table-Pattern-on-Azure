@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "index_table_function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7292",
+      "launchBrowser": false
+    }
+  }
+}
