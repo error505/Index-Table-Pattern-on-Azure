@@ -13,6 +13,9 @@ The **Index Table Pattern** architecture consists of the following components:
 
 ### 📊 Architectural Diagram
 
+![image](https://github.com/user-attachments/assets/bf5b68d0-9e7f-4faf-91ef-077028de742e)
+
+
 ```mermaid
 graph TD
     Client["Client"] -->|Data Update| AzureFunction["Azure Function"]
